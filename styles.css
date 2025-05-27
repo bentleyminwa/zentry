@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  color: whitesmoke;
+}
+
+#app {
+  background: linear-gradient(135deg, #d34f73, #db7f67);
+  max-width: 450px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 30px;
+}
+
+input {
+  flex: 1;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: #db7f67;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #db7f67;
+  position: relative;
+}
+
+#taskList li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url("images/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+#taskList li.completed {
+  color: #db7f67;
+  text-decoration: line-through;
+}
+
+#taskList li.completed::before {
+  background-image: url("images/checked.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

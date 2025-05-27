@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zentry - A simple and elegant todo application"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>Zentry</title>
+  </head>
+  <body>
+    <main id="app">
+      <header>
+        <div class="logo">
+          <h1>Zentry</h1>
+          <img src="images/logo.png" alt="" />
+        </div>
+        <form>
+          <label for="taskInput" hidden>Enter Task</label>
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter your task here..."
+            required
+            autofocus
+          />
+          <button type="submit">Add Task</button>
+        </form>
+      </header>
+
+      <section>
+        <ul id="taskList">
+          <!-- <li class="completed">Task functionality</li>
+          <li>Add localStorage</li> -->
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
