@@ -1,5 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+:root {
+  /* font variables */
+  --font-family: "Quicksand", sans-serif;
+  --light-font: 300;
+  --normal-font: 400;
+  --medium-font: 500;
+  --semi-bold-font: 600;
+  --bold-font: 700;
+  --base-font-size: 1rem;
+  --font-scale: 1.25;
+  --h5: calc(var(--base-font-size) * var(--font-scale));
+  --h4: calc(var(--h5) * var(--font-scale));
+  --h3: calc(var(--h4) * var(--font-scale));
+  --h2: calc(var(--h3) * var(--font-scale));
+  --h1: calc(var(--h2) * var(--font-scale));
+
+  /* color variables */
+  --primary-color: #ef7674;
+
+  /* theme variables */
+  --dark-theme-bg: linear-gradient(135deg, #011529, #002642);
+  --dark-theme-color: #e5dada;
+  --light-theme-bg: #e5dada;
+  --light-theme-color: #011529;
+  --dark-theme-checkbox: url("images/white-unchecked.png");
+  --light-theme-checkbox: url("images/unchecked.png");
+  --theme-checkbox-checked: url("images/checked.png");
+}
+
 html {
   box-sizing: border-box;
 }
@@ -12,6 +41,20 @@ html {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+svg {
+  color: #f05365;
+}
+
 img {
   max-width: 100%;
 }
@@ -21,7 +64,7 @@ ul {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-family);
 }
 
 #app {
@@ -31,13 +74,21 @@ body {
 }
 
 #app[data-theme="dark"] {
-  background: linear-gradient(135deg, #1a1a1a, #333333);
-  color: #f4f4f4;
+  background: var(--dark-theme-bg);
+  color: var(--dark-theme-color);
 }
 
 #app[data-theme="light"] {
-  background: linear-gradient(135deg, #f4f4f4 #e7e7e7);
-  color: #333;
+  background: var(--light-theme-bg);
+  color: var(--light-theme-color);
+}
+
+#app[data-theme="light"] .logo {
+  color: var(--light-theme-color);
+}
+
+#app[data-theme="dark"] .logo {
+  color: var(--dark-theme-color);
 }
 
 .header-content {
@@ -47,23 +98,15 @@ body {
   margin-bottom: 2rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 0.5rem;
-  color: #db7f67;
-}
-
-.logo img {
-  width: 40px;
-  height: 40px;
-}
-
 .switchBtn {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.greetings .time {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 form {
@@ -71,6 +114,7 @@ form {
   align-items: center;
   background-color: whitesmoke;
   border-radius: 30px;
+  margin-top: 2rem;
 }
 
 input {
@@ -81,14 +125,14 @@ input {
   border-radius: 30px 0 0 30px;
   outline: none;
   background: transparent;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-family);
 }
 
 form button {
   padding: 1rem;
   border: none;
   outline: none;
-  background-color: #db7f67;
+  background-color: var(--primary-color);
   color: whitesmoke;
   cursor: pointer;
   border-radius: 30px;
@@ -157,7 +201,5 @@ section {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
   cursor: pointer;
 }

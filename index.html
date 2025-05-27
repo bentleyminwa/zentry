@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Zentry - A simple and elegant todo application"
+      content="Axen - A simple and elegant todo application"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="theme.js" defer></script>
     <script src="app.js" defer></script>
-    <title>Zentry</title>
+
+    <title>Axen</title>
   </head>
   <body>
     <main id="app" data-theme="dark">
       <header>
         <div class="header-content">
-          <div class="logo">
-            <img src="images/logo.png" alt="" />
-            <h1>Zentry</h1>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="logo"
+          >
+            <path
+              d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"
+            />
+            <path d="M2 6h4" />
+            <path d="M2 10h4" />
+            <path d="M2 14h4" />
+            <path d="M2 18h4" />
+            <path
+              d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
+            />
+          </svg>
+        </div>
+        <div class="greetings">
+          <h1>Hey, Kahn</h1>
+          <p class="time">27 May 2025</p>
         </div>
         <form>
           <label for="taskInput" hidden>Enter Task</label>
@@ -33,7 +57,6 @@
           <button type="submit">Add Task</button>
         </form>
       </header>
-
       <section>
         <ul id="taskList">
           <!-- <li class="completed">Task functionality</li>
