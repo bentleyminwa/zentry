@@ -111,6 +111,24 @@ section {
   position: relative;
 }
 
+#app[data-theme="dark"] #taskList li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url("images/white-unchecked.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+#app[data-theme="dark"] #taskList li.completed::before {
+  background-image: url("images/checked.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
 #taskList li::before {
   content: "";
   width: 20px;
