@@ -22,14 +22,29 @@ ul {
 
 body {
   font-family: "Quicksand", sans-serif;
-  color: whitesmoke;
 }
 
 #app {
-  background: linear-gradient(135deg, #d34f73, #db7f67);
   max-width: 450px;
   min-height: 100vh;
   padding: 2rem;
+}
+
+#app[data-theme="dark"] {
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  color: #f4f4f4;
+}
+
+#app[data-theme="light"] {
+  background: linear-gradient(135deg, #f4f4f4 #e7e7e7);
+  color: #333;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .logo {
@@ -37,12 +52,18 @@ body {
   align-items: center;
   justify-content: start;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  color: #db7f67;
 }
 
 .logo img {
   width: 40px;
   height: 40px;
+}
+
+.switchBtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 form {
@@ -63,7 +84,7 @@ input {
   font-family: "Quicksand", sans-serif;
 }
 
-button {
+form button {
   padding: 1rem;
   border: none;
   outline: none;

@@ -8,15 +8,18 @@
       content="Zentry - A simple and elegant todo application"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="theme.js" defer></script>
     <script src="app.js" defer></script>
     <title>Zentry</title>
   </head>
   <body>
-    <main id="app">
+    <main id="app" data-theme="dark">
       <header>
-        <div class="logo">
-          <h1>Zentry</h1>
-          <img src="images/logo.png" alt="" />
+        <div class="header-content">
+          <div class="logo">
+            <img src="images/logo.png" alt="" />
+            <h1>Zentry</h1>
+          </div>
         </div>
         <form>
           <label for="taskInput" hidden>Enter Task</label>
