@@ -1,0 +1,42 @@
+#app[data-theme="dark"] {
+  background: var(--dark-theme-bg);
+  color: var(--dark-theme-color);
+}
+
+#app[data-theme="light"] {
+  background: var(--light-theme-bg);
+  color: var(--light-theme-color);
+}
+
+#app[data-theme="light"] .logo {
+  color: var(--light-theme-color);
+}
+
+#app[data-theme="dark"] .logo {
+  color: var(--dark-theme-color);
+}
+
+.themeSwitch .switchBtn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#app[data-theme="dark"] #taskList li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: var(--dark-theme-checkbox);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+#app[data-theme="dark"] #taskList li.completed::before {
+  background-image: var(--theme-checkbox-checked);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}

@@ -53,6 +53,7 @@ h6 {
 
 svg {
   color: #f05365;
+  cursor: pointer;
 }
 
 img {
@@ -73,35 +74,11 @@ body {
   padding: 2rem;
 }
 
-#app[data-theme="dark"] {
-  background: var(--dark-theme-bg);
-  color: var(--dark-theme-color);
-}
-
-#app[data-theme="light"] {
-  background: var(--light-theme-bg);
-  color: var(--light-theme-color);
-}
-
-#app[data-theme="light"] .logo {
-  color: var(--light-theme-color);
-}
-
-#app[data-theme="dark"] .logo {
-  color: var(--dark-theme-color);
-}
-
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
-}
-
-.switchBtn {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
 }
 
 .greetings .time {
@@ -136,9 +113,9 @@ form button {
   color: whitesmoke;
   cursor: pointer;
   border-radius: 30px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  font-weight: var(--bold-font);
 }
 
 section {
@@ -151,26 +128,8 @@ section {
   justify-content: start;
   gap: 1rem;
   padding: 1rem 0;
-  border-bottom: 1px solid #db7f67;
+  border-bottom: 1px solid var(--primary-color);
   position: relative;
-}
-
-#app[data-theme="dark"] #taskList li::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-image: url("images/white-unchecked.png");
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-}
-
-#app[data-theme="dark"] #taskList li.completed::before {
-  background-image: url("images/checked.png");
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
 }
 
 #taskList li::before {
@@ -178,19 +137,19 @@ section {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-image: url("images/unchecked.png");
+  background-image: var(--light-theme-checkbox);
   background-size: cover;
   background-position: center;
   cursor: pointer;
 }
 
 #taskList li.completed {
-  color: #db7f67;
+  color: var(--primary-color);
   text-decoration: line-through;
 }
 
 #taskList li.completed::before {
-  background-image: url("images/checked.png");
+  background-image: var(--theme-checkbox-checked);
   background-size: cover;
   background-position: center;
   cursor: pointer;

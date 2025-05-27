@@ -1,10 +1,7 @@
-const app = document.querySelector("#app");
-const headerContent = document.querySelector(".header-content");
-
-const switchBtn = document.createElement("img");
-switchBtn.src = "images/sun.png";
-switchBtn.classList.add("switchBtn");
-headerContent.appendChild(switchBtn);
+const switchBtn = document.querySelector(".switchBtn");
+const sunIcon = document.querySelector(".sunIcon");
+const moonIcon = document.querySelector(".moonIcon");
+const app = document.getElementById("app");
 
 function toggleTheme() {
   const currentTheme = app.getAttribute("data-theme");
@@ -12,17 +9,15 @@ function toggleTheme() {
   let newTheme;
   if (currentTheme === "dark") {
     newTheme = "light";
-    switchBtn.src = "images/moon.png";
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "inline";
   } else {
     newTheme = "dark";
-    switchBtn.src = "images/sun.png";
+    sunIcon.style.display = "inline";
+    moonIcon.style.display = "none";
   }
 
   app.setAttribute("data-theme", newTheme);
-}
-
-function saveThemePreference(theme) {
-  localStorage.setItem("theme", theme);
 }
 
 switchBtn.addEventListener("click", toggleTheme);
